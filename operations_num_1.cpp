@@ -4,11 +4,21 @@ void itc_num_print(int number) {
     cout << number;}
 
 int itc_len_num(long long number) {
-     long long digits = 0;
+long long digits = 0;
+if (number > 0) {
   while (number > 0) {
     digits += 1;
     number = number / 10;}
   return digits;}
+else if (number < 0) {
+    number = number * (-1);
+ while (number > 0) {
+    digits += 1;
+    number = number / 10;}
+  return digits;}
+else if (number == 0) {
+    return 1;}
+}
 
 int itc_sum_num(long long number) {
     int summa, i;
