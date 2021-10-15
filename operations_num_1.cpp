@@ -21,22 +21,43 @@ else if (number == 0) {
 }
 
 int itc_sum_num(long long number) {
-    int summa, i;
-    summa = 0;
+int summa, i;
+summa = 0;
+if (number > 0) {
     while (number > 0){
         i = number % 10;
         summa = summa + i;
         number = number / 10;}
-    return summa;}
+    return summa;
+} else if (number < 0) {
+    number = number * (-1);
+    while (number > 0){
+        i = number % 10;
+        summa = summa + i;
+        number = number / 10;}
+    return summa;
+} else if (number == 0) {
+    return 0;}
+}
 
 long long itc_multi_num(long long number) {
     int multi, i;
     multi = 1;
+if (number > 0) {
     while (number > 0) {
         i = number % 10;
         multi = multi * i;
         number = number / 10;}
-    return multi;}
+    return multi;
+} else if (number < 0) {
+    number = number * (-1);
+    while (number > 0) {
+        i = number % 10;
+        multi = multi * i;
+        number = number / 10;}
+    return multi;
+}
+}
 
 int itc_max_num(long long number) {
     int maximum;
