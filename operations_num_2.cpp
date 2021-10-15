@@ -17,11 +17,16 @@ int itc_rev_num(long long number) {
   int amount, length;
   amount = 0;
   length = 0;
+if (number < 0) {
+        number = number * (-1);
   while (number>0) {
     amount=amount*10+(number%10);
     length=length+1;
     number=number/10;}
-  return itc_len_num(amount);}
+  return itc_len_num(amount);
+} else if ((number < 10) && (number >= 0)) {
+    return 1;}
+}
 
 int itc_null_count(long long number) {
     int zero, i;
