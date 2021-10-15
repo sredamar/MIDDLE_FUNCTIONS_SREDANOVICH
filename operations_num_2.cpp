@@ -2,13 +2,16 @@
 
 int itc_min_num(long long number) {
     int minimum = 9;
-    if (number == 0)
-        return 0;
-    while (number > 0) {
+if (number < 0) {
+    number = number * (-1);
+while (number > 0) {
         if ((number % 10) < minimum)
             minimum = number % 10;
     number = number / 10;}
-    return minimum;}
+    return minimum;
+} else if ((number < 10) && (number >= 0)) {
+    return number;}
+}
 
 int itc_rev_num(long long number) {
   int amount, length;
