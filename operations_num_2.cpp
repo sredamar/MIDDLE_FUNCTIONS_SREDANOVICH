@@ -61,18 +61,27 @@ int itc_null_count(long long number) {
     else if (number == 0)
         return 1;}
 
-bool itc_mirror_num(long long number) {
-    long long a, b;
-    a = mypow(10, itc_len_num(number) / 2 + 1) + number / mypow(10, itc_len_num(number) / 2 + itc_len_num(number) % 2) * 10 + 1;
-    b = mypow(10, itc_len_num(number) / 2 + 1)+ (number % mypow(10, itc_len_num(number) / 2)) * 10 + 1;
-    if (a == itc_rev_num_support(b))
+bool itc_mirror_num(long long number){
+    if (number < 0){
+        number = number * (-1);}
+    if ( number == 0){
+        return 1;}
+    long long number_reversed;
+    number_reversed = number;
+    long long reversed = 0;
+    while (number > 0){
+        reversed = reversed * 10 + number % 10;
+        number = number / 10;}
+    if ( reversed == number_reversed)
         return true;
     else
         return false;}
 
 int itc_mirror_count(long long number) {
+  if (number < 0) {
+    number = number * (-1);}
   int r = 0;
-  for (long long i=1 ; i <= number ; i++) {
+  for (int i = 1 ; i <= number ; i++) {
     if (itc_mirror_num(i))
         r = r + 1;}
   return r;}
