@@ -1,14 +1,14 @@
 #include "middle.h"
 
 int itc_rev_oct_num(long long number){
-    int r = 0;
-    int k = 0;
-    while (number > 0){
-        r = r + (number % 10) * mypow(8, k);
-        number = number / 10;
-        k += 1;}
-    return r;}
-
+    long long oct;
+    oct = 0;
+    int digits;
+    digits = itc_len_num(number);
+    for (int i = 0; i < digits; i++){
+        oct = oct + (number % 10)* mypow(8, i);
+        number = number / 10;}
+    return oct;}
 int itc_covert_num(long long number, int ss) {
     long long r = 1;
     while (number > 0) {
