@@ -23,8 +23,10 @@ int itc_rev_num(long long number) {
   int amount, length;
   amount = 0;
   length = 0;
-    if ((number >= 0) && (number < 10)) {
+    if (number == 0){
         return 1;}
+   // if ((number >= 0) && (number < 10)) {
+       // return 1;}
     if (number < 0) {
             number = number * (-1);}
     while (number > 0) {
