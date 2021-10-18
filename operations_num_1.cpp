@@ -18,7 +18,7 @@ else if (number < 0) {
   return digits;}
 else if (number == 0) {
     return 1;}
-}
+return 0;}
 
 int itc_sum_num(long long number) {
 int summa, i;
@@ -38,7 +38,7 @@ if (number > 0) {
     return summa;
 } else if (number == 0) {
     return 0;}
-}
+return 0;}
 
 long long itc_multi_num(long long number) {
     int multi, i;
@@ -55,9 +55,8 @@ if (number > 0) {
         i = number % 10;
         multi = multi * i;
         number = number / 10;}
-    return multi;
-}
-}
+    return multi;}
+return 0;}
 
 int itc_max_num(long long number) {
     int maximum;
@@ -77,4 +76,4 @@ while (number > 0) {
     return maximum;
 } else if ((number < 10) && (number >= 0)) {
     return number;}
-}
+return 0;}
