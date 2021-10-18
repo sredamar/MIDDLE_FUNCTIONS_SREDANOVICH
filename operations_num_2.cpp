@@ -22,14 +22,12 @@ return 0;}
 int itc_rev_num(long long number) {
   int amount, length;
   amount = 0;
-  length = 0;
     if (number == 0){
         return 1;}
     if (number < 0) {
             number = number * (-1);}
     while (number > 0) {
     amount = amount * 10 + (number % 10);
-    length = length + 1;
     number = number / 10;}
   return itc_len_num(amount);}
 
