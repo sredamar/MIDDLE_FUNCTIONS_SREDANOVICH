@@ -20,7 +20,7 @@ while (number > 0) {
 return 0;}
 
 int itc_rev_num(long long number) {
-  int amount, length;
+  long long amount, length;
   amount = 0;
     if (number == 0){
         return 1;}
