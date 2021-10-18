@@ -27,7 +27,7 @@ int itc_rev_num(long long number) {
         return 1;}
     if (number < 0) {
             number = number * (-1);}
-    while (number >= 10) {
+    while (number > 0) {
     amount = amount * 10 + (number % 10);
     length = length + 1;
     number = number / 10;}
