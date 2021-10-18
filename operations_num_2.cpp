@@ -23,44 +23,15 @@ int itc_rev_num(long long number) {
   int amount, length;
   amount = 0;
   length = 0;
-if (number > 0) {
-    while (number > 0) {
+    if ((number >= 0) && (number < 10)) {
+        return 1;}
+    if (number < 0) {
+            number = number * (-1);}
+    while (number >= 10) {
     amount = amount * 10 + (number % 10);
     length = length + 1;
     number = number / 10;}
   return itc_len_num(amount);}
-        else if (number < 0) {
-                number = number * (-1);
-  while (number > 0) {
-    amount = amount * 10 + (number % 10);
-    length = length + 1;
-    number = number / 10;}
-  return itc_len_num(amount);
-} else if ((number < 10) && (number >= 0)) {
-    return 1;}
-return 0;}
-
-int itc_null_count(long long number) {
-    int zero, i;
-    zero = 0;
-    if (number > 0) {
-            while (number > 0) {
-            i = number % 10;
-                if (i == 0) {
-            zero++;}
-            number = number / 10;}
-            return zero;}
-    else if (number < 0) {
-        number = number * (-1);
-    while (number > 0) {
-        i = number % 10;
-        if (i == 0)
-            zero++;
-        number = number / 10;}
-    return zero;}
-    else if (number == 0) {
-        return 1;}
-    return 0;}
 
 bool itc_mirror_num(long long number){
     if (number < 0){
