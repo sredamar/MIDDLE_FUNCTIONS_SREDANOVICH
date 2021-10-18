@@ -20,8 +20,10 @@ int itc_second_max_num(long long number) {
         return -1;}
 
 int itc_second_simple_max_num(long long number) {
-    if (number < 10)
-        return -1;
+    if (number < 0) {
+        number = number * (-1);}
+    if (number < 10) {
+        return -1;}
     if (number > 9) {
     int first, second;
     first = -1;
@@ -34,11 +36,12 @@ int itc_second_simple_max_num(long long number) {
             if ((number % 10) > second)
                 second = number % 10; }
         number = number / 10; }
-    if (first == second)
-        return -1;
-    else
+    if (first == second) {
+        return -1;}
+    else {
         return second;}
-    return 0;}
+        }
+        return 0; }
 
 long long itc_bin_num(long long number) {
     if (number < 0){
