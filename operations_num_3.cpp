@@ -37,7 +37,8 @@ int itc_second_simple_max_num(long long number) {
     if (first == second)
         return -1;
     else
-        return second;}}
+        return second;}
+    return 0;}
 
 long long itc_bin_num(long long number) {
     if (number < 0){
