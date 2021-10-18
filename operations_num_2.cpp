@@ -17,7 +17,7 @@ while (number > 0) {
     return minimum;
 } else if ((number < 10) && (number >= 0)) {
     return number;}
-}
+return 0;}
 
 int itc_rev_num(long long number) {
   int amount, length;
@@ -38,7 +38,7 @@ if (number > 0) {
   return itc_len_num(amount);
 } else if ((number < 10) && (number >= 0)) {
     return 1;}
-}
+return 0;}
 
 int itc_null_count(long long number) {
     int zero, i;
